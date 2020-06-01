@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 import { ToastrService } from 'ngx-toastr';
 
-const URL = 'http://localhost:8080/api/upload';
+const URL = 'http://localhost:8080/api/products';
 
 @Component({
   selector: 'app-homepage',
