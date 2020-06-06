@@ -1,15 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FileSelectDirective } from 'ng2-file-upload';
 
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { MatTableModule, MatInputModule } from '@angular/material';
+//import { ErrorStateMatcher } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ToastrModule } from 'ngx-toastr';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +35,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     ToastrModule.forRoot(),
     FormsModule,
     FileUploadModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

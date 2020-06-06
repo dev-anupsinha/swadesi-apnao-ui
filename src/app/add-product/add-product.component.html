@@ -1,1 +1,82 @@
-<p>add-product works!</p>
+<p>Add New Product</p>
+<form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+  <label>
+    Product Name:
+    <input
+      type="text"
+      placeholder="Atta,Biscut..."
+      formControlName="productName"
+      required
+    />
+  </label>
+
+  <label>
+    Product Type:
+    <input
+      type="text"
+      placeholder="Flour...."
+      formControlName="productType"
+      required
+    />
+  </label>
+
+  <label>
+    Product Brand:
+    <input
+      type="text"
+      placeholder="Patanjali..."
+      formControlName="productBrand"
+      required
+    />
+  </label>
+
+  <label>
+    Comments:
+    <textarea
+      ng-model="myTextarea"
+      placeholder="Any Comments..."
+      rows="3"
+      cols="30"
+      formControlName="productComments"
+      required
+    ></textarea>
+  </label>
+  <label>
+    Email or Conatct no:
+    <input
+      type="text"
+      placeholder="Contact details..."
+      formControlName="userContact"
+      required
+    />
+  </label>
+
+  <div class="file-upload">
+    <label>
+      Product Image:
+      <input
+        type="file"
+        name="image"
+        ng2FileSelect
+        [uploader]="uploader"
+        accept="image/*"
+      />
+      <!-- accept="image/x-png,image/gif,image/jpeg" -->
+      <button
+        type="button"
+        (click)="uploader.uploadAll()"
+        [disabled]="!uploader.getNotUploadedItems().length"
+      >
+        Upload
+      </button>
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!addProductForm.valid">Submit</button>
+</form>
+
+<hr />
+
+<p>Form Value: {{ addProductForm.value | json }}</p>
+
+<p>Form Status: {{ addProductForm.status }}</p>

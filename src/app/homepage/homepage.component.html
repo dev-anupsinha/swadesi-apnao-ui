@@ -2,24 +2,3 @@
   <h1>Swadesi Apnao - Bhartiya Brands Only</h1>
   <p>Built with Angular and Restful APIs(SpringBoot/Node)</p>
 </div>
-<div class="wrapper">
-  <h2>Angular Image Upload Demo</h2>
-
-  <div class="file-upload">
-    <input
-      type="file"
-      name="image"
-      ng2FileSelect
-      [uploader]="uploader"
-      accept="image/*"
-    />
-    <!-- accept="image/x-png,image/gif,image/jpeg" -->
-    <button
-      type="button"
-      (click)="uploader.uploadAll()"
-      [disabled]="!uploader.getNotUploadedItems().length"
-    >
-      Upload
-    </button>
-  </div>
-</div>
